@@ -33,7 +33,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Operating System :: OS Independent"
     ],
-    packages=["RefutasLibrary"],
+    packages=["refutaslib"],
     include_package_data=True,
     install_requires=["numpy"]
 )
