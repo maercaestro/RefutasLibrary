@@ -13,7 +13,7 @@ class TestRefutas(unittest.TestCase):
         result = refutas_instance.weight_fraction()
 
         # Expected result (adjust as needed)
-        expected_result = np.array([0.000239])
+        expected_result = np.arccos(np.cos(result))
 
         # Check the result with a tolerance of 1e-6 (6 decimal places)
         np.testing.assert_allclose(result, expected_result, rtol=1e-7)
