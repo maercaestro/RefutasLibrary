@@ -4,18 +4,24 @@ Refutas Equation.
 
 ### Installation
 ```
-pip install medium-multiply
+pip install RefutasLibrary
 ```
 
 ### Get started
-How to multiply one number by another with this lib:
+This library is better use to handle a dataframe containing an array of flow and viscosity.
+With this information provided, it can calculate the weight fraction and viscosity of the final mixture.
+The weight fraction used the assumption of density of 0.861.
+
+The flow is using the unit of m3/hr
+The viscosity is using the unit of centistoke (cst)
 
 ```Python
-from medium_multiply import Multiplication
+from refutaslib.refutaseq import Refutas
 
-# Instantiate a Multiplication object
-multiplication = Multiplication(2)
+# calling the object
+mix = Refutas(flow,viscosity)
 
-# Call the multiply method
-result = multiplication.multiply(5)
+# use the object to calculate weight fraction and viscosity of mixture
+weight_fractions = mix.weight_fraction()
+visc_mix = mix.visc_mix()
 ```
